@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <meta name="keywords" content="天地图"/>
+  <title>天地图－根据关键字本地搜索</title>
+  <script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/tdt_map_search.js" type="text/javascript" charset="utf-8"></script>
+
+  <script src="https://api.tianditu.gov.cn/api?v=4.0&tk=f758d80eb68dbe45d2042e010b6adda0" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="css/tdt_map_search.css"/>
+</head>
+<body onLoad="onLoad()">
+<div style="width: 100%;">
+  <!--    搜索框-->
+  <div style="position: absolute; margin-left: 3%; z-index: 1111; margin-top: 60px;">
+    <input type="text" id="searchInput" value="kfc" />
+    <input type="button" id="searchBtn" onclick="localsearch.search(document.getElementById('searchInput').value, 1)"  value="搜索"/>
+  </div>
+  <div style="height: 5px;"></div>
+  <!-- 建议词面板 -->
+  <!--    <div id="suggestsDivImmediately" class="suggests"></div>-->
+  <!--    搜索结果-->
+  <div id="searchResultAllDiv">
+    <!--关闭按钮-->
+    <img style="height: 30px; width: 30px; position: absolute; margin-left: -310px; margin-top: 5px;"
+         id="closeSearchResults" onclick="hiddenSearchResultNode('hidden')" src="img/refuse_icon.png" />
+
+    <!-- 提示词面板 -->
+    <div id="promptDiv" class="prompt"></div>
+    <!-- 统计面板 -->
+    <div id="statisticsDiv" class="statistics"></div>
+    <!-- 建议词面板 -->
+    <div id="suggestsDivImmediately" class="suggests"></div>
+    <!-- 公交提示面板 -->
+    <div id="lineDataDiv" class="lineData"></div>
+    <!-- 搜索结果面板 -->
+    <div id="resultDiv" class="result">
+      <div id="searchDiv"></div>
+      <div id="pageDiv">
+        <div style="height: 5px"></div>
+        <!--                    <input type="button" value="第一页" onClick="localsearch.firstPage()"/>-->
+        <button id="firstPage" class="page-btn"  onClick="localsearch.firstPage()" style=" margin-left: 50px;color: white; font-size: 10px; background-color: #009688;  height: 22px; font-weight: 600;">第一页</button>
+
+        <!--                    <input type="button" value="上一页" onClick="localsearch.previousPage()"/>-->
+        <button  id="beforePage" class="page-btn"  onClick="localsearch.previousPage()" style=" color: white; font-size: 10px;  background-color: #009688;  height: 22px; font-weight: 600;">上一页</button>
+
+        <!--                    <input type="button" value="下一页" onClick="localsearch.nextPage()"/>-->
+        <button  id = "nextPage" class="page-btn"   onClick="localsearch.nextPage()" style="  color: white; font-size: 10px; background-color: #009688;  height: 22px; font-weight: 600;">下一页</button>
+
+        <!--                    <input type="button" value="最后一页" onClick="localsearch.lastPage()"/>-->
+        <button id="finallyPage" class="page-btn"   onClick="localsearch.lastPage()" style="  color: white; font-size: 10px; background-color: #009688;  height: 22px; font-weight: 600;">最后一页</button>
+        <br/>
+        <div style="height: 8px;"></div>
+        <font style="margin-left: 88px; font-weight: 600; color: #777;">转到第</font>&nbsp;
+        <input type="text" value="1" id="pageId" size="3"/>
+        <font  style="margin-left: 7px; font-weight: 600; color: #777;">页</font>
+        <!--                    <input type="button" onClick="localsearch.gotoPage(parseInt(document.getElementById('pageId').value));"-->
+        <!--                           value="转到"/>-->
+        <button id="jumpPage" class="page-btn"   onClick="localsearch.gotoPage(parseInt(document.getElementById('pageId').value));" style="  margin-top: -4px;color: white; font-size: 10px; background-color: #009688;  height: 22px; font-weight: 600;">转到</button>
+        <div style="height: 10px;"></div>
+      </div>
+    </div>
+  </div>
+  <div id="mapDiv" style="margin: 2%; width: 1100px;"></div>
+</div>
+
+<script>
+
+</script>
+</body>
+</html>
+

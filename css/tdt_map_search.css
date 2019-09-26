@@ -1,0 +1,187 @@
+@charset "utf-8";
+
+.search {
+    font-size: 13px;
+    border: 1px solid #999999;
+}
+
+.ls {
+    line-height: 27px;
+    padding-left: 7px;
+}
+
+.prompt {
+    display: none;
+    font-size: 13px;
+    border: 1px solid #999999;
+}
+
+.statistics {
+    display: none;
+    font-size: 13px;
+    border: 1px solid #999999;
+    overflow-y: scroll;
+    height: 150px;
+}
+
+.suggests {
+    display: none;
+    font-size: 13px;
+    border: 1px solid #999999;
+}
+
+.lineData {
+    display: none;
+    font-size: 13px;
+    border: 1px solid #999999;
+}
+
+.result {
+    display: none;
+    font-size: 12px;
+    border: 1px solid #999999;
+    line-height: 27px;
+    padding-left: 7px;
+}
+
+
+#mapDiv {
+    width: 1100px;
+    height: 700px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px 0 #999;
+    border: solid 1px #c3c3c3;
+}
+
+#searchInput {
+    width: 350px;
+    background-color: rgba(255, 255, 255, .7);
+    height: 42px;
+    color: #009688;
+    font-size: 16px;
+    font-weight: 600;
+    border: solid 2px #009688;
+    border-radius: 5px;
+    outline: 0;
+    -webkit-appearance: none;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    box-sizing: border-box;
+    /*display: block;*/
+    padding-left: 10px;
+    line-height: 1.3;
+}
+
+input,
+b,
+p {
+    margin-left: 5px;
+    font-size: 14px
+}
+
+#searchBtn {
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 18px;
+    background-color: #009688;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 14px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.result {
+    display: none;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    line-height: 27px;
+    padding-left: 7px;
+    box-shadow: 0 0 11px 0 #999;
+    border-radius: 5px;
+}
+
+#searchResultAllDiv {
+    transition: all 1s;
+    position: absolute;
+    top: 120px;
+    z-index: 1111;
+    margin-left: 3.3%;
+    width: 350px;
+    background-color: white;
+}
+
+.page-btn {
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 18px;
+    background-color: #009688;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 14px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    height: 22px;
+    line-height: 22px;
+    padding: 0 5px;
+    font-size: 12px;
+}
+
+.tdt-infowindow-tip-container {
+    margin-top: -2px;
+    right: 725px;
+    top: 17px;
+}
+
+.tdt-infowindow-content-wrapper,
+.tdt-infowindow-tip {
+    border: solid 2px #009688;
+    border-radius: 5px;
+}
+
+.tdt-infowindow-content {
+    font-size: 10px;
+    color: #009688;
+    font-weight: 600;
+}
+
+* {
+    transition: all 0.5s;
+}
+
+/*动画组件*/
+@keyframes big-litter-log {
+    0% {
+        /*transform: scale(0.6);*/
+        height: 15px;
+        margin-left: -10px;
+        margin-top: -20px;
+        width: 15px;
+    }
+
+    50% {
+        /*transform: scale(0.9);*/
+        height: 25px;
+        margin-left: -15px;
+        margin-top: -25px;
+        width: 25px;
+    }
+
+    100% {
+        /*transform: scale(0.6);*/
+        height: 15px;
+        margin-left: -10px;
+        margin-top: -20px;
+        width: 15px;
+    }
+}
+
+/*.tdt-marker-icon{*/
+/*    !*animation: big-litter-log 2s infinite;*!*/
+/*}*/
