@@ -180,6 +180,14 @@ p {
         margin-top: -20px;
         width: 15px;
     }
+
+
+}
+.param-name{
+    font-size: 13px; font-weight: bold;
+}
+.param-val{
+    font-size: 10px; font-weight: 600;
 }
 
 /*.tdt-marker-icon{*/
